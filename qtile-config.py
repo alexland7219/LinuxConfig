@@ -9,9 +9,6 @@ import subprocess
 mod = "mod4"
 terminal = guess_terminal()
 
-# requires firefox, rofi, thunar, flameshot, and nitrogen and picom on autostart
-# also requires DejaVu Sans mono & Inconsolata **for powerline**, and fontawesome for icons
-
 keys = [
     # A list of available commands that can be bound to keys can be found
     # at https://docs.qtile.org/en/latest/manual/config/lazy.html
@@ -54,7 +51,7 @@ keys = [
     Key([mod], "d", lazy.spawn('rofi -show drun'), desc="Spawn a command using ROFI"),
     Key([mod], "n", lazy.spawn('thunar'), desc="Open file manager"),
 
-    Key([mod, "shift"], "p", lazy.spawn('sudo poweroff now'), desc="Shutdown RIGHT NOW"),
+    Key([mod, "shift"], "p", lazy.spawn('poweroff now'), desc="Shutdown RIGHT NOW"),
     Key([mod, "shift"], "s", lazy.spawn('flameshot gui'), desc="Take screenshot"),
 
     Key([], "XF86MonBrightnessUp", lazy.spawn('xbacklight -inc 5'), desc="Brightness up"),
@@ -95,7 +92,7 @@ for idx, i in enumerate(groups, start=1):
         ]
     )
 
-colors = ["#F7768E","#4B365F", "#9063CD", "#ED7D3A", "#EE5548", "#EF2D56", "#DCED31", "#0CCE6B", "#218251", "#363537"]
+colors = ["#f66a78","#7a2728", "#b93b3e", "#566c2e", "#6b8429", "#89ac32", "#e3ca69", "#f86375", "#b14b55", "#404036"]
 bar_bg_color = "#1A1B26"
 
 layouts = [
